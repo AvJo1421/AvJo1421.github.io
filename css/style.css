@@ -140,7 +140,7 @@ nav {
   border-radius: 0px;
   padding: 1.75rem;
   max-width: 1400px;                /* narrower than full width */
-  margin: 0 auto;                  /* centers the card */
+  margin: 0 auto 2rem;                  /* centers the card */
 }
 
 .card-head {
