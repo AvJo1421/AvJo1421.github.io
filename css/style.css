@@ -519,10 +519,6 @@ nav {
 }
 
 /* ---- Contact ---- */
-.contact {
-  background: var(--bg);
-}
-
 .contact .eyebrow {
   text-align: center;
   margin-bottom: 1.5rem;
@@ -532,22 +528,44 @@ nav {
   text-align: center;
   color: var(--muted);
   font-size: 1.1rem;
-  max-width: 500px;
+  max-width: 1400px;
   margin: 0 auto 2.5rem;
+}
+
+.contact-email {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.15rem;
+}
+
+.contact-email a {
+  color: var(--text);
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.15rem;
+}
+
+.contact-email a:hover {
+  color: var(--accent);
 }
 
 .contact-links {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1.25rem;
   flex-wrap: wrap;
 }
 
 .contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   text-decoration: none;
   color: var(--text);
   border: 2px solid var(--text);
-  padding: 0.75rem 2rem;
+  padding: 0.65rem 1.5rem;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   transition: all 0.2s;
@@ -696,4 +714,49 @@ nav {
     flex-wrap: wrap;
     justify-content: center;
   }
+}
+
+
+.rec-more {
+  display: inline;
+}
+
+.rec-more summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 600;
+  display: inline;
+  list-style: none;
+}
+
+.rec-more summary::-webkit-details-marker {
+  display: none;   /* hide default arrow */
+}
+
+.rec-more summary::after {
+  content: " ↝ read more";
+}
+
+.rec-more[open] summary::after {
+  content: " ↜ read less";
+}
+
+.rec-more[open] summary {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.rec-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+  color: #0a66c2;              /* LinkedIn blue */
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.rec-linkedin:hover {
+  text-decoration: underline;
 }
