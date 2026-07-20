@@ -14,11 +14,14 @@
     <nav>
       <div class="logo"> Data Science Portfolio | Atharva Atul Joshi</div>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+  <li><a href="#about">About</a></li>
+  <li><a href="#projects">Projects</a></li>
+  <li><a href="#experience">Experience</a></li>
+  <li><a href="#recommendations">Recommendations</a></li>
+  <li><a href="#blogs">Writing</a></li>
+  <li><a href="#background">Background</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
     </nav>
   </header>
 
@@ -28,10 +31,21 @@
       <p class="eyebrow">About</p>
       <img class="avatar" src="images/Av_blazer_4.jpg" alt="Atharva">
       <h1 class="hero-name">Atharva</h1>
-      <p class="hero-intro">
-        Data Scientist and Machine Learning Engineer building
-        production-ready ML systems.
-      </p>
+   <p class="hero-intro">
+  Data Scientist and Machine Learning Engineer with over two years of
+  experience spanning agentic AI, statistical modelling, and applied
+  machine learning across research, sports analytics, and financial
+  domains. I design and deploy production-grade systems end to end, from
+  data pipelines to LLM-powered agents, most recently building StockFlow,
+  a multi-agent AI platform on GCP Cloud Run.
+</p>
+
+<p class="hero-intro">
+  I hold an MSc in Data Science with Distinction, and I enjoy turning
+  complex analytical work, from geospatial behavioural analysis to
+  time-series forecasting, into clear, actionable insight for technical
+  and non-technical audiences alike.
+</p>
     </section>
 
 <section id="projects" class="projects">
@@ -145,35 +159,119 @@
   </details>
 </article>
 
-    <article class="project-card">
-      <div class="card-head">
-    <img class="card-logo" src="images/tesco_nlp_1.jpg" alt="StockFlow logo"> 
-        <div class="card-titles">
-          <h3 class="card-title">Ingredient Analysis using Microsoft AI Foundary</h3>
-          <p class="card-sub">This project aims to leverage Natural Language Processing (NLP) to analyze and interpret food ingredients more effectively.</p>
+ <article class="project-card">
+  <div class="card-head">
+    <img class="card-logo" src="images/tesco_nlp_1.jpg" alt="Ingredient Analysis logo">
+    <div class="card-titles">
+      <h3 class="card-title">Ingredient Analysis using NLP</h3>
+      <p class="card-sub">Grading and answering questions about food ingredients</p>
+    </div>
+    <div class="card-links">
+      <a class="card-link" href="https://github.com/AvJo1421/Ingredients-Analysis-using-Natural-Language-Processing" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+
+  <ul class="tech-stack">
+    <li>Python</li>
+    <li>NLP</li>
+    <li>Azure AI Foundry</li>
+    <li>Custom NER</li>
+    <li>CLU</li>
+    <li>TF-IDF</li>
+  </ul>
+
+  <details class="card-details">
+    <summary>More details</summary>
+
+    <h4 class="detail-heading">What it does</h4>
+    <p class="detail-text">
+      Most shoppers choose food by packaging or brand, rarely reading the
+      ingredients, and fewer still can interpret them. This project uses
+      NLP to read a product's ingredient list, grade it on a simple health
+      scale, and let users ask plain-language questions about what is
+      inside and how healthy it is.
+    </p>
+
+    <h4 class="detail-heading">How it works</h4>
+
+    <div class="feature-list">
+
+      <div class="feature">
+        <div class="feature-icon">🏷️</div>
+        <div class="feature-body">
+          <h5 class="feature-title">Custom Named Entity Recognition</h5>
+          <p class="feature-desc">
+            A domain-specific Custom NER model, trained in Azure AI
+            Foundry's Language Studio, identifies and classifies food
+            ingredients from raw ingredient text.
+          </p>
         </div>
-        <a class="card-link" href="#" target="_blank" rel="noopener">Live ↗</a>
       </div>
 
-      <ul class="tech-stack">
-        <li>Python</li>
-        <li>LangGraph</li>
-        <li>Microsoft AI Foundary</li>
-        <li>NLP</li>
-        <li>Customized Named Entity Recognition</li>
-        <li> TF-IDF (Term Frequency–Inverse Document Frequency) Vectorizer</li>
+      <div class="feature">
+        <div class="feature-icon">⚖️</div>
+        <div class="feature-body">
+          <h5 class="feature-title">Rule-based grading</h5>
+          <p class="feature-desc">
+            A rules layer maps recognised ingredients onto a five-tier
+            health scale (Grade A to E), with an Unknown tier for products
+            the model cannot fully resolve.
+          </p>
+        </div>
+      </div>
 
-      </ul>
+      <div class="feature">
+        <div class="feature-icon">🤖</div>
+        <div class="feature-body">
+          <h5 class="feature-title">Batch classifier</h5>
+          <p class="feature-desc">
+            A TF-IDF vectoriser and classification model extend the grading
+            to batches of products, turning ingredient text into numerical
+            features for fast, scalable scoring.
+          </p>
+        </div>
+      </div>
 
-      <details class="card-details">
-        <summary>More details</summary>
-        <p>
-          A production NLP system which harnesses the power if Microsoft AI Foundary and Language Studio to analyse ingredients of a food package using
-           Customised Named Entity Recognition and uses raw python logic logic to classify that product into 5 levels of healthy
+      <div class="feature">
+        <div class="feature-icon">💬</div>
+        <div class="feature-body">
+          <h5 class="feature-title">Question answering</h5>
+          <p class="feature-desc">
+            A Question Answering and Conversational Language Understanding
+            layer lets users ask about a product's ingredients and health
+            in natural language and get direct answers.
+          </p>
+        </div>
+      </div>
 
-        </p>
-      </details>
-    </article>
+      <div class="feature">
+        <div class="feature-icon">🔗</div>
+        <div class="feature-body">
+          <h5 class="feature-title">Orchestrated pipeline</h5>
+          <p class="feature-desc">
+            An orchestration layer chains the stages together, so recognition,
+            grading, and answering run as a single end-to-end flow from raw
+            ingredients to a user-facing response.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <h4 class="detail-heading">Context</h4>
+    <p class="detail-text">
+      Grew out of my MSc Data Science thesis at the University of Essex,
+      exploring how NLP can make nutritional information more transparent
+      for everyday consumers.
+    </p>
+
+    <div class="media-gallery">
+      <img src="images/nlp_workflow.jpg" alt="CNER workflow diagram">
+      <img src="images/nlp_grades.jpg" alt="Product grading output">
+    </div>
+
+  </details>
+</article>
 
   </div>
 </section>
@@ -196,60 +294,56 @@
 
           <div class="tl-roles">
 
-            <div class="tl-role">
-              <div class="tl-role-head">
-                <h4 class="tl-role-title">Data Scientist II (Research and Analytics)
-                </h4>
-                <span class="tl-role-dates">Oct 2025 – Jan 2026</span>
-              </div>
-              <p class="tl-role-desc">Short focus line for this role.</p>
+           <div class="tl-role">
+  <div class="tl-role-head">
+    <h4 class="tl-role-title">Data Scientist II (Research and Analytics)</h4>
+    <span class="tl-role-dates">Oct 2025 – Jan 2026</span>
+  </div>
+  <p class="tl-role-desc">
+    Built a geospatial analytics pipeline over GPS telemetry from 128
+    sensors across a 10-month study, applying Kernel Density Estimation,
+    Bhattacharyya Affinity, and hypothesis testing to surface grazing
+    pattern shifts. Produced visualisations and written recommendations
+    for non-technical stakeholders at the Foundation for Common Land.
+  </p>
+</div>
 
-              <details class="card-details">
-            <summary>More details</summary>
-            <p>Fuller context across the roles — tools, data scale, outcomes.</p>
-          </details>
+<div class="tl-role">
+  <div class="tl-role-head">
+    <h4 class="tl-role-title">Data Scientist (ML and Analytics)</h4>
+    <span class="tl-role-dates">Feb 2025 – Apr 2025</span>
+  </div>
+  <p class="tl-role-desc">
+    Triangulated two national datasets — the Rugby Football Union database
+    and the Active Lives Survey (~6,000 variables) — using Python and SQL,
+    identifying a 6% year-on-year growth in female participation and
+    high-potential regions for RFU investment. Built Power BI dashboards
+    and an SOP so sports scientists could run the analysis independently.
+  </p>
+</div>
 
-            </div>
+<div class="tl-role">
+  <div class="tl-role-head">
+    <h4 class="tl-role-title">Data Scientist (ML Modelling)</h4>
+    <span class="tl-role-dates">Oct 2024 – Jan 2025</span>
+  </div>
+  <p class="tl-role-desc">
+    Processed 38GB of digital twin sensor data into a clean pipeline for
+    predictive modelling and anomaly detection. Evaluated Random Forest,
+    XGBoost, LSTM, and Prophet with hyperparameter tuning, reaching over
+    75% accuracy and establishing forecasting feasibility for the system.
+  </p>
+</div>
 
-            <div class="tl-role">
-              <div class="tl-role-head">
-                <h4 class="tl-role-title">Data Scientist</h4>
-                <span class="tl-role-dates">Feb 2025 – April 2025</span>
-              </div>
-              <p class="tl-role-desc">Short focus line for this role.</p>
-
-              <details class="card-details">
-            <summary>More details</summary>
-            <p>Fuller context across the roles — tools, data scale, outcomes.</p>
-          </details>
-
-            </div>
-
-              <div class="tl-role">
-              <div class="tl-role-head">
-                <h4 class="tl-role-title">Data Scientist</h4>
-                <span class="tl-role-dates">Oct 2024 – Jan 2025</span>
-              </div>
-              <p class="tl-role-desc">Short focus line for this role.</p>
-              <details class="card-details">
-            <summary>More details</summary>
-            <p>Fuller context across the roles — tools, data scale, outcomes.</p>
-          </details>
-            </div>
-
-              <div class="tl-role">
-              <div class="tl-role-head">
-                <h4 class="tl-role-title"> Gardaute Data Science Lab Assitant</h4>
-                <span class="tl-role-dates">Oct 2023 – March 2024</span>
-              </div>
-              <p class="tl-role-desc">Short focus line for this role.</p>
-
-              <details class="card-details">
-            <summary>More details</summary>
-            <p>Fuller context across the roles — tools, data scale, outcomes.</p>
-          </details>
-
-            </div>
+<div class="tl-role">
+  <div class="tl-role-head">
+    <h4 class="tl-role-title">Graduate Data Science Lab Assistant</h4>
+    <span class="tl-role-dates">Oct 2023 – Mar 2024</span>
+  </div>
+  <p class="tl-role-desc">
+    ADD A FOCUS LINE — what you did in this role.
+  </p>
+</div>
 
 
             <!-- duplicate .tl-role blocks for the remaining two contracts -->
@@ -267,7 +361,7 @@
         <h3 class="tl-title">Data Science Intern</h3>
         <p class="tl-org">AI Variant</p>
       </div>
-      <span class="tl-dates">Sept 2022 – June 2022</span>
+      <span class="tl-dates">Sept 2022 – June 2023</span>
     </div>
 
     <p class="tl-desc">One line on the role overall.</p>
@@ -294,29 +388,7 @@
     <!-- repeat for Project 3 and 4 -->
 
   </div>
-</article>
 
-    <article class="timeline-item">
-  <div class="timeline-card">
-    <div class="tl-head">
-      <div>
-        <h3 class="tl-title">
-          Volunteer Role Title
-          <span class="tl-tag">Volunteer</span>
-        </h3>
-        <p class="tl-org">Organisation Name</p>
-      </div>
-      <span class="tl-dates">2022 – 2023</span>
-    </div>
-
-    <p class="tl-desc">
-      One or two lines on what you did and the impact.
-    </p>
-  </div>
-</article>
-
-    </div>
-  </div>
 </section>
 
 <section id="recommendations" class="recommendations">
@@ -341,7 +413,7 @@
         </p>
         <div class="rec-author">
           <p class="rec-name">Dr. Benjamin Jones</p>
-          <p class="rec-role">Research Lead, University of Essex X</p>
+          <p class="rec-role">Research Lead, University of Essex</p>
         </div>
       </article>
 
@@ -375,29 +447,32 @@
 
     <div class="blog-grid">
 
-      <a class="blog-card" href="https://medium.com/@you/post-1" target="_blank" rel="noopener">
-        <span class="blog-tag">Article</span>
-        <h3 class="blog-title">Title of your first article</h3>
+      <a class="blog-card" href="https://medium.com/@atharva-atul/building-a-neural-network-from-scratch-part-1-6ae25f77ad94" target="_blank" rel="noopener">
+        <span class="blog-tag">Deep Learning</span>
+        <h3 class="blog-title">Building a Neural Network from Scratch — Part 1</h3>
         <p class="blog-excerpt">
-          A one-line hook or summary of what the piece covers.
+          Constructing a neural network step by step, without relying on
+          high-level libraries, to understand what happens under the hood.
         </p>
         <span class="blog-read">Read on Medium ↗</span>
       </a>
 
-      <a class="blog-card" href="https://medium.com/@you/post-2" target="_blank" rel="noopener">
-        <span class="blog-tag">Article</span>
-        <h3 class="blog-title">Title of your second article</h3>
+      <a class="blog-card" href="https://medium.com/@atharva-atul/machine-learning-basic-5-assumptions-of-multi-linear-regression-with-example-f9527276f22d" target="_blank" rel="noopener">
+        <span class="blog-tag">Statistics</span>
+        <h3 class="blog-title">5 Assumptions of Multiple Linear Regression</h3>
         <p class="blog-excerpt">
-          A one-line hook or summary of what the piece covers.
+          A practical walk through the core assumptions behind multiple
+          linear regression, with worked examples.
         </p>
         <span class="blog-read">Read on Medium ↗</span>
       </a>
 
-      <a class="blog-card" href="https://medium.com/@you/post-3" target="_blank" rel="noopener">
-        <span class="blog-tag">Article</span>
-        <h3 class="blog-title">Title of your third article</h3>
+      <a class="blog-card" href="https://medium.com/@atharva-atul/understanding-vif-part-1-3c1f9907ef3f" target="_blank" rel="noopener">
+        <span class="blog-tag">Statistics</span>
+        <h3 class="blog-title">Understanding VIF</h3>
         <p class="blog-excerpt">
-          A one-line hook or summary of what the piece covers.
+          Breaking down the Variance Inflation Factor and how it detects
+          multicollinearity in regression models.
         </p>
         <span class="blog-read">Read on Medium ↗</span>
       </a>
@@ -417,66 +492,29 @@
   <div class="section-inner">
     <p class="eyebrow">Background &amp; Achievements</p>
 
-    <div class="bg-list">
+    <div class="bg-highlights">
 
-      <article class="bg-card">
-        <div class="bg-head">
-          <div>
-            <h3 class="bg-title">ATV Design Team — Marketing &amp; Sponsorship</h3>
-            <span class="bg-year">Inter-collegiate</span>
-          </div>
-        </div>
-        <details class="card-details">
-          <summary>More details</summary>
-          <p class="bg-desc">
-            Led marketing and secured sponsorship for the team, gaining
-            hands-on experience in outreach, negotiation, and stakeholder
-            management.
-          </p>
-          <div class="media-gallery">
-            <img src="images/atv_1.jpg" alt="ATV team">
-            <img src="images/atv_2.jpg" alt="ATV build">
-          </div>
-        </details>
-      </article>
+  <div class="bg-line">
+    <span class="bg-icon">📚</span>
+    <p>Volunteered nine months at an Indian NGO, teaching English and Mathematics to underprivileged children.</p>
+  </div>
 
-      <article class="bg-card">
-        <div class="bg-head">
-          <div>
-            <h3 class="bg-title">Inter-collegiate Competition Winner</h3>
-            <span class="bg-year">2019</span>
-          </div>
-        </div>
-        <details class="card-details">
-          <summary>More details</summary>
-          <p class="bg-desc">Won a national inter-collegiate competition.</p>
-          <div class="media-gallery">
-            <img src="images/comp_1.jpg" alt="Competition">
-          </div>
-        </details>
-      </article>
+  <div class="bg-line">
+    <span class="bg-icon">🤖</span>
+    <p>Built an Arduino-controlled vine robot as my BTech Mechanical Engineering final project.</p>
+  </div>
 
-      <article class="bg-card">
-        <div class="bg-head">
-          <div>
-            <h3 class="bg-title">Vine Robot — BTech Final Project</h3>
-            <span class="bg-year">Mechanical Engineering</span>
-          </div>
-        </div>
-        <details class="card-details">
-          <summary>More details</summary>
-          <p class="bg-desc">
-            Designed and built an Arduino-controlled vine robot, combining
-            mechanical design with embedded control systems.
-          </p>
-          <div class="media-gallery">
-            <img src="images/vine_1.jpg" alt="Vine robot">
-            <img src="images/vine_2.jpg" alt="Vine robot build">
-          </div>
-        </details>
-      </article>
+  <div class="bg-line">
+    <span class="bg-icon">🚗</span>
+    <p>Led marketing and sponsorship for an inter-collegiate ATV design team.</p>
+  </div>
 
-    </div>
+  <div class="bg-line">
+    <span class="bg-icon">🏆</span>
+    <p>Winner, inter-collegiate engineering competition (2019).</p>
+  </div>
+
+</div>
   </div>
 </section>
 

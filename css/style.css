@@ -2,7 +2,7 @@
 :root {
   --bg: #ffffff;
   --text: #1a1a1a;
-  --muted: #666666;
+  --muted: #444444;
   --accent: #2563eb;
   --nav-bg: #1a1a1a;
   --nav-text: #f5f5f5;
@@ -112,7 +112,7 @@ nav {
 }
 
 .hero-intro {
-  max-width: 500px;
+  max-width: 1400px;
   color: var(--muted);
   font-size: 1.1rem;
 }
@@ -559,8 +559,9 @@ nav {
 }
 
 /* ---- Background & Achievements (stacked, one per row) ---- */
+/* ---- Background & Achievements (compact highlights) ---- */
 .background {
-  background: #f5f5f5;   /* was var(--bg) */
+  background: #f5f5f5;
 }
 
 .background .eyebrow {
@@ -568,30 +569,33 @@ nav {
   margin-bottom: 2.5rem;
 }
 
-.bg-list {
+.bg-highlights {
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
-.bg-card {
-  border: 2px solid var(--text);
-  padding: 1.5rem;
+.bg-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  background: var(--bg);
+  border-left: 3px solid var(--accent);
+  padding: 0.9rem 1.1rem;
 }
 
-.bg-title {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.1rem;
+.bg-icon {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  flex-shrink: 0;
 }
 
-.bg-year {
-  display: inline-block;
-  color: var(--muted);
-  font-size: 0.85rem;
-  margin-top: 0.25rem;
-  margin-bottom: 0.75rem;
+.bg-line p {
+  color: var(--text);
+  font-size: 0.98rem;
+  font-weight: 600;
 }
 
 
