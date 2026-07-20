@@ -38,34 +38,112 @@
   <div class="section-inner">
     <p class="eyebrow">Projects</p>
 
-    <article class="project-card">
-      <div class="card-head">
-    <img class="card-logo" src="images/stockflow.jpg" alt="StockFlow logo"> 
-        <div class="card-titles">
-          <h3 class="card-title">StockFlow</h3>
-          <p class="card-sub">Multi-agent stock research application</p>
-        </div>
-        <a class="card-link" href="#" target="_blank" rel="noopener">Live ↗</a>
-      </div>
+   <article class="project-card">
+  <div class="card-head">
+    <img class="card-logo" src="images/stockflow.jpg" alt="StockFlow logo">
+    <div class="card-titles">
+      <h3 class="card-title">StockFlow</h3>
+      <p class="card-sub">AI-native stock intelligence platform</p>
+    </div>
+    <div class="card-links">
+      <a class="card-link" href="https://stockflow-deployment.web.app/" target="_blank" rel="noopener">Live ↗</a>
+      <a class="card-link" href="https://github.com/AvJo1421/Stock-prices-api" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
 
-      <ul class="tech-stack">
-        <li>Python</li>
-        <li>LangGraph</li>
-        <li>FastAPI</li>
-        <li>GCP</li>
-        <li>Claude API</li>
-      </ul>
+  <ul class="tech-stack">
+    <li>Python</li>
+    <li>LangChain</li>
+    <li>Claude</li>
+    <li>FastAPI</li>
+    <li>React</li>
+    <li>GCP</li>
+  </ul>
 
-      <details class="card-details">
-        <summary>More details</summary>
-        <p>
-          A production ML system that fetches market data and news,
-          then uses a multi-agent pipeline to synthesise research
-          summaries. Deployed on GCP Cloud Run with a Firebase frontend.
-        </p>
-      </details>
-    </article>
+  <details class="card-details">
+    <summary>More details</summary>
 
+   <h4 class="detail-heading">What it does</h4>
+<p class="detail-text">
+  An AI-native stock intelligence platform designed and deployed end to
+  end, built around four core features:
+</p>
+
+<div class="feature-list">
+
+  <div class="feature">
+    <div class="feature-icon">🔍</div>
+    <div class="feature-body">
+      <h5 class="feature-title">Stock Researcher</h5>
+      <p class="feature-desc">
+        Ask anything about your watchlist in plain English, powered by a
+        LangChain pandas agent.
+      </p>
+    </div>
+  </div>
+
+  <div class="feature">
+    <div class="feature-icon">🎙️</div>
+    <div class="feature-body">
+      <h5 class="feature-title">AI Podcast</h5>
+      <p class="feature-desc">
+        A dual-agent Claude discussion voiced through ElevenLabs. Stream,
+        listen, discuss.
+      </p>
+    </div>
+  </div>
+
+  <div class="feature">
+    <div class="feature-icon">📊</div>
+    <div class="feature-body">
+      <h5 class="feature-title">Watchlist</h5>
+      <p class="feature-desc">
+        Live prices across your portfolio, streamed in real time from
+        Polygon.io.
+      </p>
+    </div>
+  </div>
+
+  <div class="feature">
+    <div class="feature-icon">📰</div>
+    <div class="feature-body">
+      <h5 class="feature-title">News Feed</h5>
+      <p class="feature-desc">
+        The latest stock-related news, with ChromaDB powering semantic
+        search across articles.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+    <h3 class="detail-heading">Architecture &amp; engineering</h3>
+    <p class="detail-text">
+      The backend runs on FastAPI, containerised with Docker and deployed
+      on GCP Cloud Run, with Cloud Scheduler driving a daily data pipeline
+      and ChromaDB serving semantic news search. The React and Tailwind
+      frontend is hosted on Firebase, with CI/CD automated through GitHub
+      Actions.
+    </p>
+
+    <h3 class="detail-heading">Full tech stack</h3>
+    <ul class="detail-stack">
+      <li><strong>Tooling:</strong> Poetry, VS Code, Git/GitHub, GitHub Actions</li>
+      <li><strong>Data:</strong> Polygon.io (Massive) API, Pandas</li>
+      <li><strong>AI/ML:</strong> LangChain (+ langchain_anthropic), Anthropic SDK, ChromaDB, ElevenLabs</li>
+      <li><strong>Backend:</strong> FastAPI, Docker</li>
+      <li><strong>Frontend:</strong> React, Tailwind CSS, Firebase Hosting</li>
+      <li><strong>Cloud:</strong> GCP Cloud Run, Scheduler, Storage, Artifact Registry, Cloud Build</li>
+    </ul>
+
+    <div class="media-gallery">
+      <img src="images/sf_architecture.jpg" alt="StockFlow architecture diagram">
+      <img src="images/sf_podcast.jpg" alt="AI podcast feature">
+     <img class="shot-top" src="images/sf_dashboard.jpg" alt="StockFlow dashboard">
+    </div>
+
+  </details>
+</article>
 
     <article class="project-card">
       <div class="card-head">
