@@ -193,6 +193,8 @@ background: var(--section-bg);;
   margin-top: 1rem;
 }
 
+
+
 .detail-heading {
   font-family: "Poppins", sans-serif;
   font-size: 1.05rem;
@@ -299,8 +301,8 @@ background: var(--section-bg);;
 .card-details summary {
   cursor: pointer;
   font-weight: 600;
-  font-size: 0.9rem;
-  color: var(--text);
+  font-size: 1.2rem;
+  color: var(--accent);
 }
 
 .card-details p {
