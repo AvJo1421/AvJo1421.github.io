@@ -69,6 +69,20 @@ nav {
   color: var(--accent);
 }
 
+.nav-cv {
+  background: var(--accent);
+  color: #fff !important;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.nav-cv:hover {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent) !important;
+}
+
 /* ---- About hero (light) ---- */
 .hero {
   max-width: var(--max-width);
