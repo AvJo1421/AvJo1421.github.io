@@ -90,12 +90,12 @@ nav {
   color: var(--text);
 }
 .avatar {
-  width: 280px;            /* bigger photo */
-  height: 280px;
-  border-radius: 75%;
+  width: 240px;
+  height: 340px;           /* taller than wide — portrait frame */
+  border-radius: 16px;     /* rounded rectangle, not a circle */
   object-fit: cover;
-  object-position: center top;
-  border: 3px solid #eaeaea;
+  object-position: center center;
+  border: 3px solid var(--border-col);
 }
 
 .hero-name {                /* name sits below the photo */
