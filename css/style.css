@@ -767,3 +767,41 @@ background: var(--section-bg);;
 .rec-linkedin:hover {
   text-decoration: underline;
 }
+
+
+/* ---- CV buttons ---- */
+.cv-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cv-btn {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.7rem 1.75rem;
+  border: 2px solid var(--border-col);
+  color: var(--text);
+  transition: all 0.2s;
+}
+
+.cv-btn:hover {
+  background: var(--border-col);
+  color: var(--bg);
+}
+
+.cv-btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.cv-btn-primary:hover {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
+}
